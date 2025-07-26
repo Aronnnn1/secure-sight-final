@@ -1,7 +1,7 @@
 // /app/api/incidents/route.ts
 import { PrismaClient } from "@prisma/client";
 import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server"; // ✅ this line is needed
+import type { NextRequest } from "next/server"; 
 import type { Incident, Camera } from "@prisma/client";
 
 type IncidentWithCamera = Incident & {
@@ -11,7 +11,7 @@ type IncidentWithCamera = Incident & {
 const prisma = new PrismaClient();
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export async function GET(req: NextRequest) { // ✅ typed request param
+export async function GET(req: NextRequest) { 
   const incidents = await prisma.incident.findMany({
     include: {
       camera: true,

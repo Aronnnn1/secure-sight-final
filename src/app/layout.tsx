@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { SessionWrapper } from "@/components/SessionWrapper"; // ✅ NEW import
+import { SessionWrapper } from "@/components/SessionWrapper"; 
 import Navbar from "@/components/Navbar";
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className="bg-[#0a0a0a] text-[#ededed]">
       <body className="bg-[#0a0a0a] text-[#ededed]">
         <Navbar />
-        <SessionWrapper>{children}</SessionWrapper> {/* ✅ Wrapped correctly */}
+        <SessionWrapper>{children}</SessionWrapper>
       </body>
     </html>
   );
